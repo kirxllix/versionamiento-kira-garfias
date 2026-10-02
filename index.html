@@ -5,10 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Example Data Table with IndexedDB</title>
 
+    <!-- Google Fonts: Baloo 2 (titulos) y Quicksand (texto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Example Product List Web App</h1>
+    <h1>Cinnamoroll Product List</h1>
+
+    <img class="cute-gif"
+         src="https://media.giphy.com/media/xKRa4f8OO5jiw/giphy.gif"
+         alt="Cinnamoroll volando entre las nubes">
+
+    <div class="counter-card" id="counterCard">
+        Products registered: <span id="productCount">0</span>
+    </div>
 
     <div class="container">
 
@@ -38,6 +51,9 @@
         </table>
     </div>
 
+    <footer class="app-footer">
+        <p>Hecho por <strong>Kira Garfias</strong> &middot; @kirxllix</p>
+    </footer>
 
     <script src="functions.js"></script>
 </body>

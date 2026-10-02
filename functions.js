@@ -40,6 +40,9 @@ function loadProductTable() {
             tableBody.appendChild(row);
         });
 
+        //Update the product counter card
+        document.getElementById('productCount').textContent = products.length;
+
     //Add event listeners for delete buttons
         document.querySelectorAll('.delete-btn').forEach(button => {
             button.addEventListener('click', deleteProduct);

@@ -1,9 +1,25 @@
+/* Paleta de colores tematica Cinnamoroll: azul cielo, blanco nube y canela */
+:root {
+    --bg-start: #bfe3ff;
+    --bg-end: #f0f9ff;
+    --accent-blue: #7ec8f7;
+    --accent-blue-dark: #4aa8e8;
+    --accent-cinnamon: #d9a679;
+    --accent-cinnamon-dark: #b8815a;
+    --cloud-white: #fdfeff;
+    --card-bg: #f4fbff;
+    --text-dark: #3d5a80;
+    --text-soft: #6d8faf;
+    --shadow: rgba(126, 200, 247, 0.35);
+}
+
 body {
-    background: linear-gradient(#8412B0, #000);
-    font-family: 'Consolas', sans-serif;
+    background: linear-gradient(160deg, var(--bg-start), var(--bg-end));
+    background-attachment: fixed;
+    font-family: 'Quicksand', sans-serif;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -11,12 +27,14 @@ body {
 }
 
 h1 {
-    color: #FFF;
+    font-family: 'Baloo 2', cursive;
+    color: var(--accent-blue-dark);
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em;
+    font-size: 2.8em;
     display: inline;
-    text-shadow: 0 0 10px #FC199A, 0 0 20px #FC199A, 0 0 30px #FC199A, 0 0 40px #FF007F, 0 0 50px #FF007F;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px var(--cloud-white), 0 0 20px var(--cloud-white), 0 0 30px var(--accent-blue);
 }
 
 .container {
@@ -31,17 +49,19 @@ h1 {
 
 .formContainer {
     text-align: center;
-    background-color: #FF007F;
+    background-color: var(--card-bg);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    border: 3px solid var(--accent-blue);
+    box-shadow: 0 6px 18px var(--shadow);
     width: 20%;
     margin-right: 20px;
 }
 
 label {
-    color: #00FFFF;
+    color: var(--text-dark);
     font-size: 14px;
+    font-weight: bold;
     margin-right: 10px;
 }
 
@@ -49,65 +69,78 @@ input {
     padding: 8px;
     margin-right: 10px;
     margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    border-radius: 12px;
+    border: 2px solid var(--accent-blue);
     width: 100%;
     box-sizing: border-box;
+    background-color: var(--cloud-white);
+    color: var(--text-dark);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent-blue-dark);
+    box-shadow: 0 0 8px var(--accent-blue);
 }
 
 button {
-    background-color: #FFCC00;
-    color: #8412B0;
+    background-color: var(--accent-blue);
+    color: var(--cloud-white);
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
     font-size: 14px;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
     width: 100%;
 }
 
 button:hover {
-    background-color: #FC199A;
-    color: #fff;
+    background-color: var(--accent-blue-dark);
+    color: var(--cloud-white);
 }
 
 table {
     width: 60%;
     border-collapse: collapse;
     margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px var(--shadow);
 }
 
 th, td {
-    border: 1px solid #ddd;
+    border: 1px solid var(--bg-start);
     padding: 12px 15px;
     text-align: left;
 }
 
 th {
-    background-color: #FC199A;
-    color: white;
+    background-color: var(--accent-blue);
+    color: var(--cloud-white);
 }
 
 td {
-    background-color: #00FFFF;
-    color: #8412B0;
+    background-color: var(--card-bg);
+    color: var(--text-dark);
 }
 
 .delete-btn {
-    background-color: #f0745e;
-    color: white;
+    background-color: var(--accent-cinnamon);
+    color: var(--cloud-white);
     border: none;
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 12px;
     cursor: pointer;
 }
 
 .delete-btn:hover {
-    background-color: #ff0800;
+    background-color: var(--accent-cinnamon-dark);
 }
 
 
 #productsTable tbody tr {
-    background-color: #FFF;
-    color: #000;
+    background-color: var(--cloud-white);
+    color: var(--text-dark);
 }

@@ -145,6 +145,15 @@ td {
     color: var(--text-dark);
 }
 
+/* Gif decorativo de Cinnamoroll */
+.cute-gif {
+    width: 140px;
+    margin-top: 15px;
+    border-radius: 20px;
+    border: 3px solid var(--accent-blue);
+    box-shadow: 0 6px 18px var(--shadow);
+}
+
 /* Tarjeta contador de productos */
 .counter-card {
     margin-top: 25px;
